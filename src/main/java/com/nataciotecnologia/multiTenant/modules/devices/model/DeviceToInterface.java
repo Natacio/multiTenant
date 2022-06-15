@@ -2,10 +2,13 @@ package com.nataciotecnologia.multiTenant.modules.devices.model;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.nataciotecnologia.multiTenant.modules.locations.model.Locations;
+import lombok.Data;
 
 import javax.persistence.*;
 
+@Data
 @Entity
+@Table(name = "device_to_interface")
 public class DeviceToInterface {
 
     @Id
@@ -24,5 +27,6 @@ public class DeviceToInterface {
 
     @ManyToOne
     @JoinColumn(name = "location_id")
+    @JsonBackReference
     private Locations location;
 }
