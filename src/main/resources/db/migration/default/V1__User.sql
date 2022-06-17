@@ -1,0 +1,1 @@
+CREATE TABLE `CLIENTE_2`.`teste` (`id` INT NOT NULL,`name` VARCHAR(45) NULL,PRIMARY KEY (`id`));
